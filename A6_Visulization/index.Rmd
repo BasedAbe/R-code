@@ -1,0 +1,90 @@
+---
+title: "World Bank Indicator Visualizations"
+author: "Abel Kassa"
+date: "2/16/2020"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+library("knitr")
+source("analysis.R")
+
+```
+
+## CO2 Emmissons by Country
+```{r CO2 plot, echo = FALSE}
+top_10_c02_plot
+```
+
+
+
+
+**_C02 Emissions by Country:_**
+**_What is one notable conclusion or insight you draw from this visualization?_**
+
+It's obvious that China has been emitting more CO2 than all of the countries combined (excluding the USA). I believe this has to do with China's heavy use of coal as a primary source of energy.
+
+## US Income Equality over Time
+
+```{r US Income Equality plot, echo = FALSE}
+us_wealth_plot
+```
+
+
+
+**_US Income Equality over Time:_**
+**_What is one notable conclusion or insight you draw from this visualization?_**
+
+It appears that around the mid 1990's there was a drastic change in the wealth distribution in the US. The top 10 percent began to gain wealth rapidly around the mid 1990's and I believe this may have to do with the internet boom around that period.
+
+## Health Expenditures by Country
+
+```{r Health Expenditures, echo = FALSE}
+healthcare_costs_plots
+```
+
+
+
+
+**_Health Expenditures by Country: What is one notable conclusion or insight you draw from this visualization?_**
+
+The most notable insight I was able to draw was that the USA total spending is dramatically larger than most of the countries on the visualization. The government spending alone shows how much more the USA has to spend on health care expenditures.
+
+## Forestation over Time
+
+```{r Forest Change, echo = FALSE}
+world_forest_plot
+```
+
+
+
+
+**_Changes in Forestation around the World: What is one notable conclusion or insight you draw from this visualization?_**
+
+It quite notable that Vietnam has seen some major changes in the rate of forestation in the country. It appears to be the country that seen the greatest loss in deforestation since 1997 with most countries in visualization remaining relatively neutral.
+
+## Growth in Access to Electricity 2000-2015
+
+```{r Access to Electricity, echo = FALSE}
+global_access_to_electricity_plot
+```
+
+
+
+**_Growth in Access to Electricity Globally:_**
+
+**_What question(s) does your visualization attempt to answer?_**
+
+My question attempts to answer which region of the world has seen the growth in access to electricity in from 2000-2015. I believe that access to electricity is necessary for a country and its citizens to succeed and this visualization will attempt to answer what region that would be. 
+
+**_What answer(s) or insight(s) do you draw from your visualization?_**
+
+The insights that I drew from my visualization are that Africa has seen a great increase in access to electricity and an insight that I drew from that is that Africa has a lot of potential for economic growth as the infrastructure continues to develop.
+
+**_Why did you select this visual layout?_**
+
+I chose the map layout as my visualization because I feel that it would show a clear representation of the regions where access to electricity grew and it is easier to understand with a map layout rather than a bar graph or pie chart.
+
+**_In what way is this an effective and expressive visualization?_**
+
+This an effective and expressive visualization because it is designed to be intuitive and displays the information in a manner that quickly communicates a message to the viewer of the visualization. The visualization is expressive because of the color use and effective due to the map display rather than a line graph.
