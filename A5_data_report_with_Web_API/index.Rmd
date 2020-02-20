@@ -1,0 +1,69 @@
+---
+title: "Actor Analysis"
+author: "Abel Kassa"
+date: "2/12/2020"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+source("analysis.R")
+library("knitr")
+actor_name <- "Will Smith"
+```
+
+This is page analyzes data about movie actors. Enjoy!
+
+## Trending Actors
+```{r, include = FALSE}
+ date <- Sys.Date() - 7 # Calculating date dynamically
+```
+Who are the **top** trending count **trending** people on TMDB (week of `r date`)
+
+```{r Trending Table, echo = FALSE}
+kable(get_trending_table()) # Rendering table for R markdown using kable()
+```
+
+## `r actor_name`
+
+```{r Specific Actor, include = FALSE}
+ actor_data <- get_actor_data(actor_name)
+  bio <- actor_data$biography
+  imdb <- actor_data$imdb_id
+  imdb_page <- paste0("https://www.imdb.com/name/",imdb)
+  known_for <- actor_data$titles
+  film_titles <- paste("-", known_for, collapse = "\n") # Rendering link for R markdown
+
+```
+### Favorite Actor
+Though they may not be included in that list for some reason, my favorite actor is **`r actor_name`**.
+
+`r imdb_page` They are known for: 
+
+`r film_titles`
+
+
+Their biography:
+`r bio`
+
+### Total Production Credits & The Average Rating For Those Productions
+
+``` {r Actor Analysis, include = FALSE}
+
+data <- analyze_actor()
+total_credits <- data$productions
+average_rate <- data$average
+raw_data <- data$raw
+
+```
+Will Smith is known for being in front of the camera but how many TV credits does 
+Will Smith have as strictly being a television series producer behind the camera and what was the average
+rating of the shows where he received a production credit?
+
+Over the years Will Smith has produced a total of **`r total_credits`** shows! During that period the average rating of the those television productions was **`r average_rate`** out of 10.
+
+```{r Raw Data, echo = FALSE}
+
+kable(raw_data) # Rendering table for markdown using kable() 
+
+```
+
